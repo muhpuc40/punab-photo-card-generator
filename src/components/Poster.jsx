@@ -82,16 +82,22 @@ const Poster = forwardRef(function Poster(
         className="absolute z-10 font-bangla"
         style={{ left: 480, top: 584, width: 430 }}
       >
-        <div className="mb-5 flex items-center gap-2 text-[23px] leading-none text-[#161616]">
-          <span>{guestType || 'সম্মানিত অতিথি'}:</span>
+        {/* <div className="mb-5 flex items-center gap-2 text-[23px] leading-none text-[#161616]">
+          <span className="guest-type">{guestType || 'সম্মানিত অতিথি'}:</span>
           <span className="h-px flex-1 bg-[#777]" />
-        </div>
+        </div> */}
+        <div className="mb-5 flex w-full items-center gap-2 text-[23px] leading-none text-[#161616]">
+          <span className="guest-type flex-shrink-0 whitespace-nowrap">
+            {guestType || 'সম্মানিত অতিথি'}:
+          </span>
 
+          <span className="h-px min-w-[15px] flex-1 bg-[#777]" />
+        </div>
         <h1 className="guest-name m-0 overflow-visible break-words pb-2 text-[41px] font-black leading-[1.22] text-[#b32420]">
           {guestName || 'অতিথির নাম'}
         </h1>
 
-        <p className="m-0 mt-3 whitespace-pre-wrap break-words text-[24px] font-semibold leading-[1.26] text-[#111]">
+        <p className="guest-designation m-0 mt-3 whitespace-pre-wrap break-words text-[24px] font-semibold leading-[1.26] text-[#111]">
           {guestDesignation || 'অতিথির পদবি / পরিচয়'}
         </p>
       </section>

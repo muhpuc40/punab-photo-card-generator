@@ -5,7 +5,7 @@
 :root {
   --poster-w: 1080px;
   --poster-h: 1230px;
-  --font-bangla: 'Noto Sans Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', 'Vrinda', sans-serif;
+  --font-bangla: 'Hind Siliguri';
 }
 
 * { box-sizing: border-box; }
@@ -25,6 +25,6 @@ body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFo
   transform-origin: top left;
 }
 .poster-canvas, .poster-canvas * { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
-.font-bangla, .guest-name { font-family: var(--font-bangla); }
+.font-bangla, .guest-name, .guest-type, .guest-designation { font-family: var(--font-bangla); }
 .guest-frame { border-top-left-radius: 96px; }
 input::placeholder, textarea::placeholder { color: #9ca3af; }
